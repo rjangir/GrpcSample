@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package city;
+
+service CityProtoService {
+  rpc SayCity (CityRequest) returns (CityReply);
+}
+
+message CityRequest{
+  string city =1;
+  
+}
+
+message CityReply{
+  string message =1;
+}
